@@ -61,6 +61,10 @@ def main() -> None:
     cases = case_metrics_from_traces(grouped)
     variants = variant_stats_from_cases(cases)
     direct_edges = edges_from_traces(grouped)
+    bottleneck_min_frequency = 100
+    material_edges = [
+        edge for edge in direct_edges if edge["frequency"] >= bottleneck_min_frequency
+    ]
     expected_path = list(variants[0]["path"]) if variants else []
     deviations = conformance_report_from_cases(cases, expected_path)
     candidates = automation_candidates_from_stats(variants, cases, expected_path)
@@ -102,6 +106,7 @@ def main() -> None:
             "activities": len(activity_counts),
             "variants": len(variants),
             "directly_follows_edges": len(direct_edges),
+            "bottleneck_min_transition_frequency": bottleneck_min_frequency,
             "cycle_p50_seconds": percentile(cycle_seconds, 0.50),
             "cycle_p90_seconds": percentile(cycle_seconds, 0.90),
             "cycle_p95_seconds": percentile(cycle_seconds, 0.95),
@@ -117,7 +122,7 @@ def main() -> None:
         "reference_path": expected_path,
         "activity_frequency": activity_counts.most_common(),
         "top_variants": [serialize_path(item) for item in variants[:20]],
-        "top_bottlenecks": bottlenecks_from_edges(direct_edges)[:20],
+        "top_bottlenecks": bottlenecks_from_edges(material_edges)[:20],
         "process_map": {"nodes": sorted(activity_counts), "edges": direct_edges},
         "deviations": {"by_kind": deviations_by_kind},
         "automation_candidates": [serialize_path(item) for item in candidates[:15]],
