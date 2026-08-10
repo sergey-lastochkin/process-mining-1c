@@ -1,5 +1,7 @@
 # Анализ процессов и события 1С
 
+[![CI](https://github.com/sergey-lastochkin/process-mining-1c/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sergey-lastochkin/process-mining-1c/actions/workflows/ci.yml)
+
 Код читает журналы событий в XES, считает варианты, ожидания между действиями и возвраты. Отдельно описан формат событий для будущей выгрузки из 1С.
 
 ![Частые варианты и длинные ожидания](studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
