@@ -20,11 +20,18 @@
 [results.json](studies/bpi-challenge-2012-2026-08-10/results.json). Графики
 генерируются только из этого файла.
 
+На зафиксированном запуске прочитано 262 200 событий из 13 087 cases: 24
+действия, 4 366 вариантов и 125 directly-follows переходов. Анализ занял
+10.235 секунды; `tracemalloc` зафиксировал максимум 231.5 MB Python-выделений.
+Медианная длительность case составила 0.809 суток, p90 30.462 суток, p95
+31.343 суток. Эти цифры описывают именно этот журнал, а не процесс 1С.
+
 ![Варианты и ожидания](studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
 
 Методика, вопросы исследования и ограничения: [docs/study-design.md](docs/study-design.md).
 Команды получения и повтора: [docs/runbook.md](docs/runbook.md). Контракт
 будущей выгрузки 1С: [onec_export/event-contract.md](onec_export/event-contract.md).
+Наблюдения прогона: [docs/bpi2012-run.md](docs/bpi2012-run.md).
 
 ## Что считает код
 

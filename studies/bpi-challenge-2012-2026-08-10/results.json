@@ -1,0 +1,1985 @@
+{
+  "activity_frequency": [
+    [
+      "W_Completeren aanvraag",
+      54850
+    ],
+    [
+      "W_Nabellen offertes",
+      52016
+    ],
+    [
+      "W_Nabellen incomplete dossiers",
+      25190
+    ],
+    [
+      "W_Valideren aanvraag",
+      20809
+    ],
+    [
+      "W_Afhandelen leads",
+      16566
+    ],
+    [
+      "A_SUBMITTED",
+      13087
+    ],
+    [
+      "A_PARTLYSUBMITTED",
+      13087
+    ],
+    [
+      "A_DECLINED",
+      7635
+    ],
+    [
+      "A_PREACCEPTED",
+      7367
+    ],
+    [
+      "O_SELECTED",
+      7030
+    ],
+    [
+      "O_CREATED",
+      7030
+    ],
+    [
+      "O_SENT",
+      7030
+    ],
+    [
+      "A_ACCEPTED",
+      5113
+    ],
+    [
+      "A_FINALIZED",
+      5015
+    ],
+    [
+      "O_CANCELLED",
+      3655
+    ],
+    [
+      "O_SENT_BACK",
+      3454
+    ],
+    [
+      "A_CANCELLED",
+      2807
+    ],
+    [
+      "A_REGISTERED",
+      2246
+    ],
+    [
+      "A_APPROVED",
+      2246
+    ],
+    [
+      "A_ACTIVATED",
+      2246
+    ],
+    [
+      "O_ACCEPTED",
+      2243
+    ],
+    [
+      "O_DECLINED",
+      802
+    ],
+    [
+      "W_Beoordelen fraude",
+      664
+    ],
+    [
+      "W_Wijzigen contractgegevens",
+      12
+    ]
+  ],
+  "automation_candidates": [
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_DECLINED"
+      ],
+      "score": 0.5009
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_DECLINED",
+        "W_Afhandelen leads"
+      ],
+      "score": 0.2394
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_DECLINED",
+        "W_Afhandelen leads"
+      ],
+      "score": 0.1466
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.0949
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.1686
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.1679
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.0427
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.1168
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.1166
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.0413
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.066
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_DECLINED",
+        "W_Afhandelen leads"
+      ],
+      "score": 0.0909
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.0908
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.0407
+    },
+    {
+      "exception_rate": 0.738,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "score": 0.0655
+    }
+  ],
+  "code_commit": "1e7384170510c9c2311b802690b58ac2f99e707a",
+  "deviations": {
+    "by_kind": {
+      "missing": 5452,
+      "out_of_order": 0,
+      "rework": 9658,
+      "unexpected": 9658
+    }
+  },
+  "ingestion": {
+    "events_loaded": 262200,
+    "events_seen": 262200,
+    "skipped_without_activity": 0,
+    "skipped_without_case": 0,
+    "skipped_without_timestamp": 0,
+    "traces_seen": 13087
+  },
+  "limits": [
+    "The BPI log is a loan-application process, not a 1C journal.",
+    "The observed top variant is a statistical comparison baseline, not a verified target process.",
+    "Pseudonymization protects aggregated output but is not an organizational retention policy.",
+    "A 1C registration log alone lacks business intent, correction reason and full document lifecycle context."
+  ],
+  "parameters": {
+    "activity": "event concept:name",
+    "correlation": "XES trace concept:name",
+    "percentile": "empirical nearest-index after sort",
+    "reference_path": "most frequent observed variant, not a business-approved normative model",
+    "resource_handling": "deterministic pseudonymization before analysis",
+    "timestamp": "event time:timestamp"
+  },
+  "process_map": {
+    "edges": [
+      {
+        "cycle_p50_seconds": 510.56550000000004,
+        "cycle_p90_seconds": 82730.676,
+        "cycle_p95_seconds": 164481.543,
+        "frequency": 38004,
+        "from": "W_Completeren aanvraag",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 302.803,
+        "cycle_p90_seconds": 574824.395,
+        "cycle_p95_seconds": 664419.195,
+        "frequency": 36084,
+        "from": "W_Nabellen offertes",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 526.388,
+        "cycle_p90_seconds": 81807.191,
+        "cycle_p95_seconds": 180304.938,
+        "frequency": 18475,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 0.273,
+        "cycle_p90_seconds": 1.08,
+        "cycle_p95_seconds": 1.911,
+        "frequency": 13087,
+        "from": "A_SUBMITTED",
+        "to": "A_PARTLYSUBMITTED"
+      },
+      {
+        "cycle_p50_seconds": 0.378,
+        "cycle_p90_seconds": 0.888,
+        "cycle_p95_seconds": 1.371,
+        "frequency": 7367,
+        "from": "A_PREACCEPTED",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 0.035,
+        "cycle_p90_seconds": 0.079,
+        "cycle_p95_seconds": 0.132,
+        "frequency": 7030,
+        "from": "O_CREATED",
+        "to": "O_SENT"
+      },
+      {
+        "cycle_p50_seconds": 1353.609,
+        "cycle_p90_seconds": 44766.585,
+        "cycle_p95_seconds": 69277.353,
+        "frequency": 6992,
+        "from": "W_Afhandelen leads",
+        "to": "W_Afhandelen leads"
+      },
+      {
+        "cycle_p50_seconds": 0.119,
+        "cycle_p90_seconds": 0.31,
+        "cycle_p95_seconds": 0.69,
+        "frequency": 6633,
+        "from": "O_SENT",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 680.617,
+        "cycle_p90_seconds": 7231.092,
+        "cycle_p95_seconds": 12242.252,
+        "frequency": 5911,
+        "from": "W_Valideren aanvraag",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 633.891,
+        "cycle_p90_seconds": 52870.758,
+        "cycle_p95_seconds": 87889.125,
+        "frequency": 5849,
+        "from": "W_Valideren aanvraag",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 43.483,
+        "cycle_p90_seconds": 12426.821,
+        "cycle_p95_seconds": 60756.98,
+        "frequency": 5459,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 373.905,
+        "cycle_p90_seconds": 727.551,
+        "cycle_p95_seconds": 893.221,
+        "frequency": 5113,
+        "from": "W_Completeren aanvraag",
+        "to": "A_ACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 1.387,
+        "cycle_p90_seconds": 2.282,
+        "cycle_p95_seconds": 2.507,
+        "frequency": 5018,
+        "from": "W_Nabellen offertes",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 343.9,
+        "cycle_p90_seconds": 673598.155,
+        "cycle_p95_seconds": 704616.172,
+        "frequency": 5015,
+        "from": "W_Completeren aanvraag",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 38.937,
+        "cycle_p90_seconds": 48.939,
+        "cycle_p95_seconds": 55.158,
+        "frequency": 4852,
+        "from": "A_PARTLYSUBMITTED",
+        "to": "A_PREACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 22.817,
+        "cycle_p90_seconds": 47.49,
+        "cycle_p95_seconds": 59.607,
+        "frequency": 4739,
+        "from": "A_PARTLYSUBMITTED",
+        "to": "W_Afhandelen leads"
+      },
+      {
+        "cycle_p50_seconds": 0.18,
+        "cycle_p90_seconds": 0.374,
+        "cycle_p95_seconds": 0.582,
+        "frequency": 3454,
+        "from": "O_SENT_BACK",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 37.411,
+        "cycle_p90_seconds": 47.094,
+        "cycle_p95_seconds": 52.723,
+        "frequency": 3429,
+        "from": "A_PARTLYSUBMITTED",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 1.451,
+        "cycle_p90_seconds": 2.228,
+        "cycle_p95_seconds": 2.444,
+        "frequency": 3255,
+        "from": "W_Valideren aanvraag",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 21.1465,
+        "cycle_p90_seconds": 90.141,
+        "cycle_p95_seconds": 134.824,
+        "frequency": 3254,
+        "from": "W_Nabellen offertes",
+        "to": "O_SENT_BACK"
+      },
+      {
+        "cycle_p50_seconds": 189180.3265,
+        "cycle_p90_seconds": 440898.651,
+        "cycle_p95_seconds": 515102.379,
+        "frequency": 3208,
+        "from": "W_Nabellen offertes",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 1.2955,
+        "cycle_p90_seconds": 2.786,
+        "cycle_p95_seconds": 47.742,
+        "frequency": 3148,
+        "from": "O_SELECTED",
+        "to": "O_CREATED"
+      },
+      {
+        "cycle_p50_seconds": 1.265,
+        "cycle_p90_seconds": 2.38,
+        "cycle_p95_seconds": 47.472,
+        "frequency": 2907,
+        "from": "A_FINALIZED",
+        "to": "O_CREATED"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 2907,
+        "from": "O_SELECTED",
+        "to": "A_FINALIZED"
+      },
+      {
+        "cycle_p50_seconds": 179.078,
+        "cycle_p90_seconds": 408.14,
+        "cycle_p95_seconds": 516.622,
+        "frequency": 2879,
+        "from": "A_ACCEPTED",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 5895.116,
+        "cycle_p90_seconds": 47628.332,
+        "cycle_p95_seconds": 61816.837,
+        "frequency": 2517,
+        "from": "W_Afhandelen leads",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 1.149,
+        "cycle_p90_seconds": 1.856,
+        "cycle_p95_seconds": 2.157,
+        "frequency": 2517,
+        "from": "W_Completeren aanvraag",
+        "to": "W_Afhandelen leads"
+      },
+      {
+        "cycle_p50_seconds": 107.76,
+        "cycle_p90_seconds": 344.184,
+        "cycle_p95_seconds": 543.099,
+        "frequency": 2515,
+        "from": "W_Afhandelen leads",
+        "to": "A_PREACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 3.412,
+        "cycle_p90_seconds": 4.452,
+        "cycle_p95_seconds": 4.874,
+        "frequency": 2234,
+        "from": "A_DECLINED",
+        "to": "W_Afhandelen leads"
+      },
+      {
+        "cycle_p50_seconds": 112.53399999999999,
+        "cycle_p90_seconds": 374.407,
+        "cycle_p95_seconds": 558.996,
+        "frequency": 2234,
+        "from": "W_Afhandelen leads",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 2108,
+        "from": "A_FINALIZED",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 188.659,
+        "cycle_p90_seconds": 408.419,
+        "cycle_p95_seconds": 522.71,
+        "frequency": 2089,
+        "from": "A_ACCEPTED",
+        "to": "A_FINALIZED"
+      },
+      {
+        "cycle_p50_seconds": 113.697,
+        "cycle_p90_seconds": 432.763,
+        "cycle_p95_seconds": 627.095,
+        "frequency": 1555,
+        "from": "W_Nabellen offertes",
+        "to": "O_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 745.1125,
+        "cycle_p90_seconds": 1948.233,
+        "cycle_p95_seconds": 2330.255,
+        "frequency": 1136,
+        "from": "W_Valideren aanvraag",
+        "to": "O_ACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 123.09299999999999,
+        "cycle_p90_seconds": 748.835,
+        "cycle_p95_seconds": 1234.99,
+        "frequency": 1120,
+        "from": "W_Completeren aanvraag",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 3.533,
+        "cycle_p90_seconds": 4.602,
+        "cycle_p95_seconds": 5.04,
+        "frequency": 1113,
+        "from": "A_DECLINED",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 474.05449999999996,
+        "cycle_p90_seconds": 956.077,
+        "cycle_p95_seconds": 1146.201,
+        "frequency": 1088,
+        "from": "W_Completeren aanvraag",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 1041,
+        "from": "O_CANCELLED",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 1.307,
+        "cycle_p90_seconds": 2.135,
+        "cycle_p95_seconds": 3.776,
+        "frequency": 974,
+        "from": "O_CANCELLED",
+        "to": "O_CREATED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 974,
+        "from": "O_SELECTED",
+        "to": "O_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 7.774,
+        "cycle_p90_seconds": 9.358,
+        "cycle_p95_seconds": 9.677,
+        "frequency": 941,
+        "from": "A_ACTIVATED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 864,
+        "from": "A_CANCELLED",
+        "to": "O_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 789,
+        "from": "A_APPROVED",
+        "to": "A_ACTIVATED"
+      },
+      {
+        "cycle_p50_seconds": 110.509,
+        "cycle_p90_seconds": 398.523,
+        "cycle_p95_seconds": 915.777,
+        "frequency": 788,
+        "from": "W_Nabellen offertes",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 771,
+        "from": "O_ACCEPTED",
+        "to": "A_REGISTERED"
+      },
+      {
+        "cycle_p50_seconds": 97.247,
+        "cycle_p90_seconds": 388.084,
+        "cycle_p95_seconds": 523.293,
+        "frequency": 768,
+        "from": "W_Nabellen offertes",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 767,
+        "from": "O_CANCELLED",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 1.673,
+        "cycle_p90_seconds": 2.696,
+        "cycle_p95_seconds": 3.026,
+        "frequency": 750,
+        "from": "A_CANCELLED",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 682,
+        "from": "A_APPROVED",
+        "to": "A_REGISTERED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 670,
+        "from": "A_REGISTERED",
+        "to": "A_ACTIVATED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 654,
+        "from": "O_ACCEPTED",
+        "to": "A_APPROVED"
+      },
+      {
+        "cycle_p50_seconds": 7.7285,
+        "cycle_p90_seconds": 9.373,
+        "cycle_p95_seconds": 10.032,
+        "frequency": 604,
+        "from": "A_REGISTERED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 581,
+        "from": "A_REGISTERED",
+        "to": "A_APPROVED"
+      },
+      {
+        "cycle_p50_seconds": 0.001,
+        "cycle_p90_seconds": 0.001,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 566,
+        "from": "O_ACCEPTED",
+        "to": "A_ACTIVATED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 546,
+        "from": "A_ACTIVATED",
+        "to": "A_REGISTERED"
+      },
+      {
+        "cycle_p50_seconds": 2.416,
+        "cycle_p90_seconds": 3.374,
+        "cycle_p95_seconds": 3.706,
+        "frequency": 512,
+        "from": "O_CANCELLED",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 824.261,
+        "cycle_p90_seconds": 1885.907,
+        "cycle_p95_seconds": 2353.126,
+        "frequency": 489,
+        "from": "W_Valideren aanvraag",
+        "to": "A_APPROVED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 478,
+        "from": "A_ACTIVATED",
+        "to": "A_APPROVED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 474,
+        "from": "A_APPROVED",
+        "to": "O_ACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 2.391,
+        "cycle_p90_seconds": 3.565,
+        "cycle_p95_seconds": 3.971,
+        "frequency": 467,
+        "from": "A_CANCELLED",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 419,
+        "from": "O_DECLINED",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 0.123,
+        "cycle_p90_seconds": 0.304,
+        "cycle_p95_seconds": 0.517,
+        "frequency": 396,
+        "from": "O_SENT",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0.001,
+        "frequency": 383,
+        "from": "A_DECLINED",
+        "to": "O_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 226.576,
+        "cycle_p90_seconds": 153461.614,
+        "cycle_p95_seconds": 249603.404,
+        "frequency": 367,
+        "from": "W_Beoordelen fraude",
+        "to": "W_Beoordelen fraude"
+      },
+      {
+        "cycle_p50_seconds": 4.060499999999999,
+        "cycle_p90_seconds": 5.381,
+        "cycle_p95_seconds": 5.833,
+        "frequency": 348,
+        "from": "A_DECLINED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 867.6795,
+        "cycle_p90_seconds": 1972.653,
+        "cycle_p95_seconds": 2680.506,
+        "frequency": 348,
+        "from": "W_Valideren aanvraag",
+        "to": "O_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 332,
+        "from": "A_REGISTERED",
+        "to": "O_ACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 4.003500000000001,
+        "cycle_p90_seconds": 5.175,
+        "cycle_p95_seconds": 5.451,
+        "frequency": 320,
+        "from": "O_DECLINED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 738.3745,
+        "cycle_p90_seconds": 2096.379,
+        "cycle_p95_seconds": 2628.121,
+        "frequency": 320,
+        "from": "W_Valideren aanvraag",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 7.641,
+        "cycle_p90_seconds": 9.186,
+        "cycle_p95_seconds": 9.879,
+        "frequency": 275,
+        "from": "A_APPROVED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 7.6225000000000005,
+        "cycle_p90_seconds": 9.097,
+        "cycle_p95_seconds": 9.606,
+        "frequency": 230,
+        "from": "O_ACCEPTED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 723.6880000000001,
+        "cycle_p90_seconds": 2112.727,
+        "cycle_p95_seconds": 2743.574,
+        "frequency": 228,
+        "from": "W_Valideren aanvraag",
+        "to": "A_REGISTERED"
+      },
+      {
+        "cycle_p50_seconds": 42.576499999999996,
+        "cycle_p90_seconds": 171.844,
+        "cycle_p95_seconds": 271.246,
+        "frequency": 200,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "O_SENT_BACK"
+      },
+      {
+        "cycle_p50_seconds": 739.842,
+        "cycle_p90_seconds": 1715.509,
+        "cycle_p95_seconds": 2068.984,
+        "frequency": 198,
+        "from": "W_Valideren aanvraag",
+        "to": "A_ACTIVATED"
+      },
+      {
+        "cycle_p50_seconds": 0.0,
+        "cycle_p90_seconds": 0,
+        "cycle_p95_seconds": 0,
+        "frequency": 192,
+        "from": "A_ACTIVATED",
+        "to": "O_ACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 301.836,
+        "cycle_p90_seconds": 1060.963,
+        "cycle_p95_seconds": 1318.42,
+        "frequency": 151,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "O_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 835.558,
+        "cycle_p90_seconds": 2130.389,
+        "cycle_p95_seconds": 2599.881,
+        "frequency": 111,
+        "from": "W_Valideren aanvraag",
+        "to": "O_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 91.126,
+        "cycle_p90_seconds": 931.229,
+        "cycle_p95_seconds": 1400.814,
+        "frequency": 109,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "O_ACCEPTED"
+      },
+      {
+        "cycle_p50_seconds": 952.489,
+        "cycle_p90_seconds": 2057.898,
+        "cycle_p95_seconds": 2535.292,
+        "frequency": 107,
+        "from": "W_Valideren aanvraag",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 440.832,
+        "cycle_p90_seconds": 1571.016,
+        "cycle_p95_seconds": 1821.957,
+        "frequency": 99,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 9.361,
+        "cycle_p90_seconds": 519.45,
+        "cycle_p95_seconds": 1267.006,
+        "frequency": 93,
+        "from": "W_Beoordelen fraude",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 83.948,
+        "cycle_p90_seconds": 386.53,
+        "cycle_p95_seconds": 621.788,
+        "frequency": 93,
+        "from": "W_Valideren aanvraag",
+        "to": "W_Beoordelen fraude"
+      },
+      {
+        "cycle_p50_seconds": 8.298,
+        "cycle_p90_seconds": 9.688,
+        "cycle_p95_seconds": 10.214,
+        "frequency": 89,
+        "from": "A_ACTIVATED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 7.911,
+        "cycle_p90_seconds": 4064.341,
+        "cycle_p95_seconds": 6584.885,
+        "frequency": 84,
+        "from": "W_Beoordelen fraude",
+        "to": "W_Afhandelen leads"
+      },
+      {
+        "cycle_p50_seconds": 327.4605,
+        "cycle_p90_seconds": 1511.74,
+        "cycle_p95_seconds": 2694.871,
+        "frequency": 74,
+        "from": "A_ACCEPTED",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 10.511,
+        "cycle_p90_seconds": 74173.938,
+        "cycle_p95_seconds": 90035.73,
+        "frequency": 73,
+        "from": "W_Afhandelen leads",
+        "to": "W_Beoordelen fraude"
+      },
+      {
+        "cycle_p50_seconds": 317.603,
+        "cycle_p90_seconds": 1031.167,
+        "cycle_p95_seconds": 1309.538,
+        "frequency": 72,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 2.814,
+        "cycle_p90_seconds": 3.888,
+        "cycle_p95_seconds": 4.431,
+        "frequency": 70,
+        "from": "O_CANCELLED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 7.318,
+        "cycle_p90_seconds": 14.121,
+        "cycle_p95_seconds": 21.672,
+        "frequency": 67,
+        "from": "A_PARTLYSUBMITTED",
+        "to": "W_Beoordelen fraude"
+      },
+      {
+        "cycle_p50_seconds": 8.006,
+        "cycle_p90_seconds": 9.377,
+        "cycle_p95_seconds": 10.145,
+        "frequency": 58,
+        "from": "A_REGISTERED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 2.599,
+        "cycle_p90_seconds": 3.75,
+        "cycle_p95_seconds": 3.883,
+        "frequency": 57,
+        "from": "A_CANCELLED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 2.582,
+        "cycle_p90_seconds": 3.596,
+        "cycle_p95_seconds": 3.799,
+        "frequency": 57,
+        "from": "A_DECLINED",
+        "to": "W_Beoordelen fraude"
+      },
+      {
+        "cycle_p50_seconds": 7.833,
+        "cycle_p90_seconds": 26.057,
+        "cycle_p95_seconds": 45.094,
+        "frequency": 57,
+        "from": "W_Beoordelen fraude",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 4.3045,
+        "cycle_p90_seconds": 5.442,
+        "cycle_p95_seconds": 5.77,
+        "frequency": 50,
+        "from": "A_DECLINED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 760.111,
+        "cycle_p90_seconds": 1636.41,
+        "cycle_p95_seconds": 2020.854,
+        "frequency": 50,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "O_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 123.023,
+        "cycle_p90_seconds": 419.166,
+        "cycle_p95_seconds": 1061.967,
+        "frequency": 46,
+        "from": "A_ACCEPTED",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 100.35900000000001,
+        "cycle_p90_seconds": 1274.024,
+        "cycle_p95_seconds": 2196.904,
+        "frequency": 44,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "A_APPROVED"
+      },
+      {
+        "cycle_p50_seconds": 3.949,
+        "cycle_p90_seconds": 4.839,
+        "cycle_p95_seconds": 5.163,
+        "frequency": 36,
+        "from": "O_DECLINED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 431.5245,
+        "cycle_p90_seconds": 1201.43,
+        "cycle_p95_seconds": 1867.552,
+        "frequency": 36,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 245.8655,
+        "cycle_p90_seconds": 523.98,
+        "cycle_p95_seconds": 986.714,
+        "frequency": 28,
+        "from": "W_Completeren aanvraag",
+        "to": "O_SELECTED"
+      },
+      {
+        "cycle_p50_seconds": 3.984,
+        "cycle_p90_seconds": 4.868,
+        "cycle_p95_seconds": 5.534,
+        "frequency": 27,
+        "from": "O_DECLINED",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 265.934,
+        "cycle_p90_seconds": 892.309,
+        "cycle_p95_seconds": 1304.635,
+        "frequency": 27,
+        "from": "W_Nabellen offertes",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 8.160499999999999,
+        "cycle_p90_seconds": 9.835,
+        "cycle_p95_seconds": 10.345,
+        "frequency": 26,
+        "from": "A_APPROVED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 62.42,
+        "cycle_p90_seconds": 231.616,
+        "cycle_p95_seconds": 903.786,
+        "frequency": 25,
+        "from": "A_ACCEPTED",
+        "to": "A_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 280.72,
+        "cycle_p90_seconds": 815.362,
+        "cycle_p95_seconds": 1531.606,
+        "frequency": 23,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "A_ACTIVATED"
+      },
+      {
+        "cycle_p50_seconds": 8.277,
+        "cycle_p90_seconds": 9.112,
+        "cycle_p95_seconds": 9.796,
+        "frequency": 22,
+        "from": "O_ACCEPTED",
+        "to": "W_Nabellen incomplete dossiers"
+      },
+      {
+        "cycle_p50_seconds": 3.747,
+        "cycle_p90_seconds": 4.799,
+        "cycle_p95_seconds": 5.079,
+        "frequency": 21,
+        "from": "A_DECLINED",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 293.339,
+        "cycle_p90_seconds": 796.796,
+        "cycle_p95_seconds": 835.656,
+        "frequency": 21,
+        "from": "W_Nabellen offertes",
+        "to": "O_DECLINED"
+      },
+      {
+        "cycle_p50_seconds": 291.77,
+        "cycle_p90_seconds": 900.216,
+        "cycle_p95_seconds": 1421.498,
+        "frequency": 19,
+        "from": "W_Completeren aanvraag",
+        "to": "A_FINALIZED"
+      },
+      {
+        "cycle_p50_seconds": 105.905,
+        "cycle_p90_seconds": 477.521,
+        "cycle_p95_seconds": 566.956,
+        "frequency": 19,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "A_REGISTERED"
+      },
+      {
+        "cycle_p50_seconds": 2.683,
+        "cycle_p90_seconds": 3.61,
+        "cycle_p95_seconds": 3.61,
+        "frequency": 14,
+        "from": "A_CANCELLED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 221.663,
+        "cycle_p90_seconds": 544.188,
+        "cycle_p95_seconds": 544.188,
+        "frequency": 13,
+        "from": "W_Valideren aanvraag",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 3.1950000000000003,
+        "cycle_p90_seconds": 4.235,
+        "cycle_p95_seconds": 4.235,
+        "frequency": 12,
+        "from": "O_CANCELLED",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 129.196,
+        "cycle_p90_seconds": 323.626,
+        "cycle_p95_seconds": 63017.794,
+        "frequency": 7,
+        "from": "W_Completeren aanvraag",
+        "to": "W_Beoordelen fraude"
+      },
+      {
+        "cycle_p50_seconds": 1.3719999999999999,
+        "cycle_p90_seconds": 6.043,
+        "cycle_p95_seconds": 500.071,
+        "frequency": 6,
+        "from": "W_Beoordelen fraude",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 12.897,
+        "cycle_p90_seconds": 44.515,
+        "cycle_p95_seconds": 44.515,
+        "frequency": 5,
+        "from": "W_Wijzigen contractgegevens",
+        "to": "W_Wijzigen contractgegevens"
+      },
+      {
+        "cycle_p50_seconds": 857408.692,
+        "cycle_p90_seconds": 8886264.767,
+        "cycle_p95_seconds": 8886264.767,
+        "frequency": 4,
+        "from": "W_Valideren aanvraag",
+        "to": "W_Wijzigen contractgegevens"
+      },
+      {
+        "cycle_p50_seconds": 170386.3565,
+        "cycle_p90_seconds": 259265.875,
+        "cycle_p95_seconds": 259265.875,
+        "frequency": 2,
+        "from": "W_Nabellen offertes",
+        "to": "W_Wijzigen contractgegevens"
+      },
+      {
+        "cycle_p50_seconds": 50651.4265,
+        "cycle_p90_seconds": 101046.499,
+        "cycle_p95_seconds": 101046.499,
+        "frequency": 2,
+        "from": "W_Wijzigen contractgegevens",
+        "to": "W_Valideren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 8.077,
+        "cycle_p90_seconds": 8.077,
+        "cycle_p95_seconds": 8.077,
+        "frequency": 1,
+        "from": "O_SELECTED",
+        "to": "W_Nabellen offertes"
+      },
+      {
+        "cycle_p50_seconds": 1.616,
+        "cycle_p90_seconds": 1.616,
+        "cycle_p95_seconds": 1.616,
+        "frequency": 1,
+        "from": "O_SENT",
+        "to": "W_Completeren aanvraag"
+      },
+      {
+        "cycle_p50_seconds": 0.008,
+        "cycle_p90_seconds": 0.008,
+        "cycle_p95_seconds": 0.008,
+        "frequency": 1,
+        "from": "W_Afhandelen leads",
+        "to": "A_CANCELLED"
+      },
+      {
+        "cycle_p50_seconds": 1223509.285,
+        "cycle_p90_seconds": 1223509.285,
+        "cycle_p95_seconds": 1223509.285,
+        "frequency": 1,
+        "from": "W_Nabellen incomplete dossiers",
+        "to": "W_Wijzigen contractgegevens"
+      },
+      {
+        "cycle_p50_seconds": 0.043,
+        "cycle_p90_seconds": 0.043,
+        "cycle_p95_seconds": 0.043,
+        "frequency": 1,
+        "from": "W_Nabellen offertes",
+        "to": "O_CREATED"
+      },
+      {
+        "cycle_p50_seconds": 352442.816,
+        "cycle_p90_seconds": 352442.816,
+        "cycle_p95_seconds": 352442.816,
+        "frequency": 1,
+        "from": "W_Wijzigen contractgegevens",
+        "to": "W_Nabellen offertes"
+      }
+    ],
+    "nodes": [
+      "A_ACCEPTED",
+      "A_ACTIVATED",
+      "A_APPROVED",
+      "A_CANCELLED",
+      "A_DECLINED",
+      "A_FINALIZED",
+      "A_PARTLYSUBMITTED",
+      "A_PREACCEPTED",
+      "A_REGISTERED",
+      "A_SUBMITTED",
+      "O_ACCEPTED",
+      "O_CANCELLED",
+      "O_CREATED",
+      "O_DECLINED",
+      "O_SELECTED",
+      "O_SENT",
+      "O_SENT_BACK",
+      "W_Afhandelen leads",
+      "W_Beoordelen fraude",
+      "W_Completeren aanvraag",
+      "W_Nabellen incomplete dossiers",
+      "W_Nabellen offertes",
+      "W_Valideren aanvraag",
+      "W_Wijzigen contractgegevens"
+    ]
+  },
+  "python": "3.12.12",
+  "reference_path": [
+    "A_SUBMITTED",
+    "A_PARTLYSUBMITTED",
+    "A_DECLINED"
+  ],
+  "source_sha256": "5cd9cc16b9bcb20bd4aae45666a5d87479ddbf47e6371618b6ad217174cecdf3",
+  "study": "BPI Challenge 2012, public XES run",
+  "summary": {
+    "activities": 24,
+    "bottleneck_min_transition_frequency": 100,
+    "cases": 13087,
+    "cases_with_rework": 9658,
+    "cycle_p50_seconds": 69857.434,
+    "cycle_p90_seconds": 2631876.989,
+    "cycle_p95_seconds": 2708077.56,
+    "directly_follows_edges": 125,
+    "duration_seconds": 10.235,
+    "events": 262200,
+    "peak_tracemalloc_bytes": 231545971,
+    "read_seconds": 6.27,
+    "reference_deviation_cases": 9658,
+    "variants": 4366
+  },
+  "top_bottlenecks": [
+    {
+      "cycle_p50_seconds": 343.9,
+      "cycle_p90_seconds": 673598.155,
+      "cycle_p95_seconds": 704616.172,
+      "frequency": 5015,
+      "from": "W_Completeren aanvraag",
+      "to": "W_Nabellen offertes"
+    },
+    {
+      "cycle_p50_seconds": 302.803,
+      "cycle_p90_seconds": 574824.395,
+      "cycle_p95_seconds": 664419.195,
+      "frequency": 36084,
+      "from": "W_Nabellen offertes",
+      "to": "W_Nabellen offertes"
+    },
+    {
+      "cycle_p50_seconds": 189180.3265,
+      "cycle_p90_seconds": 440898.651,
+      "cycle_p95_seconds": 515102.379,
+      "frequency": 3208,
+      "from": "W_Nabellen offertes",
+      "to": "W_Valideren aanvraag"
+    },
+    {
+      "cycle_p50_seconds": 226.576,
+      "cycle_p90_seconds": 153461.614,
+      "cycle_p95_seconds": 249603.404,
+      "frequency": 367,
+      "from": "W_Beoordelen fraude",
+      "to": "W_Beoordelen fraude"
+    },
+    {
+      "cycle_p50_seconds": 526.388,
+      "cycle_p90_seconds": 81807.191,
+      "cycle_p95_seconds": 180304.938,
+      "frequency": 18475,
+      "from": "W_Nabellen incomplete dossiers",
+      "to": "W_Nabellen incomplete dossiers"
+    },
+    {
+      "cycle_p50_seconds": 510.56550000000004,
+      "cycle_p90_seconds": 82730.676,
+      "cycle_p95_seconds": 164481.543,
+      "frequency": 38004,
+      "from": "W_Completeren aanvraag",
+      "to": "W_Completeren aanvraag"
+    },
+    {
+      "cycle_p50_seconds": 633.891,
+      "cycle_p90_seconds": 52870.758,
+      "cycle_p95_seconds": 87889.125,
+      "frequency": 5849,
+      "from": "W_Valideren aanvraag",
+      "to": "W_Valideren aanvraag"
+    },
+    {
+      "cycle_p50_seconds": 1353.609,
+      "cycle_p90_seconds": 44766.585,
+      "cycle_p95_seconds": 69277.353,
+      "frequency": 6992,
+      "from": "W_Afhandelen leads",
+      "to": "W_Afhandelen leads"
+    },
+    {
+      "cycle_p50_seconds": 5895.116,
+      "cycle_p90_seconds": 47628.332,
+      "cycle_p95_seconds": 61816.837,
+      "frequency": 2517,
+      "from": "W_Afhandelen leads",
+      "to": "W_Completeren aanvraag"
+    },
+    {
+      "cycle_p50_seconds": 43.483,
+      "cycle_p90_seconds": 12426.821,
+      "cycle_p95_seconds": 60756.98,
+      "frequency": 5459,
+      "from": "W_Nabellen incomplete dossiers",
+      "to": "W_Valideren aanvraag"
+    },
+    {
+      "cycle_p50_seconds": 680.617,
+      "cycle_p90_seconds": 7231.092,
+      "cycle_p95_seconds": 12242.252,
+      "frequency": 5911,
+      "from": "W_Valideren aanvraag",
+      "to": "W_Nabellen incomplete dossiers"
+    },
+    {
+      "cycle_p50_seconds": 723.6880000000001,
+      "cycle_p90_seconds": 2112.727,
+      "cycle_p95_seconds": 2743.574,
+      "frequency": 228,
+      "from": "W_Valideren aanvraag",
+      "to": "A_REGISTERED"
+    },
+    {
+      "cycle_p50_seconds": 867.6795,
+      "cycle_p90_seconds": 1972.653,
+      "cycle_p95_seconds": 2680.506,
+      "frequency": 348,
+      "from": "W_Valideren aanvraag",
+      "to": "O_DECLINED"
+    },
+    {
+      "cycle_p50_seconds": 738.3745,
+      "cycle_p90_seconds": 2096.379,
+      "cycle_p95_seconds": 2628.121,
+      "frequency": 320,
+      "from": "W_Valideren aanvraag",
+      "to": "A_DECLINED"
+    },
+    {
+      "cycle_p50_seconds": 835.558,
+      "cycle_p90_seconds": 2130.389,
+      "cycle_p95_seconds": 2599.881,
+      "frequency": 111,
+      "from": "W_Valideren aanvraag",
+      "to": "O_CANCELLED"
+    },
+    {
+      "cycle_p50_seconds": 952.489,
+      "cycle_p90_seconds": 2057.898,
+      "cycle_p95_seconds": 2535.292,
+      "frequency": 107,
+      "from": "W_Valideren aanvraag",
+      "to": "O_SELECTED"
+    },
+    {
+      "cycle_p50_seconds": 824.261,
+      "cycle_p90_seconds": 1885.907,
+      "cycle_p95_seconds": 2353.126,
+      "frequency": 489,
+      "from": "W_Valideren aanvraag",
+      "to": "A_APPROVED"
+    },
+    {
+      "cycle_p50_seconds": 745.1125,
+      "cycle_p90_seconds": 1948.233,
+      "cycle_p95_seconds": 2330.255,
+      "frequency": 1136,
+      "from": "W_Valideren aanvraag",
+      "to": "O_ACCEPTED"
+    },
+    {
+      "cycle_p50_seconds": 739.842,
+      "cycle_p90_seconds": 1715.509,
+      "cycle_p95_seconds": 2068.984,
+      "frequency": 198,
+      "from": "W_Valideren aanvraag",
+      "to": "A_ACTIVATED"
+    },
+    {
+      "cycle_p50_seconds": 91.126,
+      "cycle_p90_seconds": 931.229,
+      "cycle_p95_seconds": 1400.814,
+      "frequency": 109,
+      "from": "W_Nabellen incomplete dossiers",
+      "to": "O_ACCEPTED"
+    }
+  ],
+  "top_variants": [
+    {
+      "cycle_p50_seconds": 37.828,
+      "cycle_p90_seconds": 48.107,
+      "cycle_p95_seconds": 53.738,
+      "frequency": 3429,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_DECLINED"
+      ],
+      "rework_count": 0,
+      "share": 0.262016
+    },
+    {
+      "cycle_p50_seconds": 3021.826,
+      "cycle_p90_seconds": 52212.256,
+      "cycle_p95_seconds": 77002.626,
+      "frequency": 1872,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_DECLINED",
+        "W_Afhandelen leads"
+      ],
+      "rework_count": 3744,
+      "share": 0.143043
+    },
+    {
+      "cycle_p50_seconds": 7528.281,
+      "cycle_p90_seconds": 63630.559,
+      "cycle_p95_seconds": 78065.7,
+      "frequency": 271,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_DECLINED",
+        "W_Afhandelen leads"
+      ],
+      "rework_count": 1084,
+      "share": 0.020708
+    },
+    {
+      "cycle_p50_seconds": 9577.327,
+      "cycle_p90_seconds": 73175.817,
+      "cycle_p95_seconds": 99062.257,
+      "frequency": 209,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 836,
+      "share": 0.01597
+    },
+    {
+      "cycle_p50_seconds": 5793.9445,
+      "cycle_p90_seconds": 62187.16,
+      "cycle_p95_seconds": 76832.547,
+      "frequency": 160,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 320,
+      "share": 0.012226
+    },
+    {
+      "cycle_p50_seconds": 7714.0865,
+      "cycle_p90_seconds": 67014.52,
+      "cycle_p95_seconds": 95257.746,
+      "frequency": 134,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 268,
+      "share": 0.010239
+    },
+    {
+      "cycle_p50_seconds": 57021.643,
+      "cycle_p90_seconds": 154749.17,
+      "cycle_p95_seconds": 231451.712,
+      "frequency": 126,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 756,
+      "share": 0.009628
+    },
+    {
+      "cycle_p50_seconds": 20487.201,
+      "cycle_p90_seconds": 149944.443,
+      "cycle_p95_seconds": 161459.826,
+      "frequency": 93,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 372,
+      "share": 0.007106
+    },
+    {
+      "cycle_p50_seconds": 36037.405,
+      "cycle_p90_seconds": 83306.912,
+      "cycle_p95_seconds": 147525.368,
+      "frequency": 87,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 348,
+      "share": 0.006648
+    },
+    {
+      "cycle_p50_seconds": 77877.125,
+      "cycle_p90_seconds": 213552.017,
+      "cycle_p95_seconds": 248210.736,
+      "frequency": 74,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 592,
+      "share": 0.005654
+    },
+    {
+      "cycle_p50_seconds": 76101.764,
+      "cycle_p90_seconds": 255501.109,
+      "cycle_p95_seconds": 263723.107,
+      "frequency": 63,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 378,
+      "share": 0.004814
+    },
+    {
+      "cycle_p50_seconds": 12809.374500000002,
+      "cycle_p90_seconds": 63108.537,
+      "cycle_p95_seconds": 73898.642,
+      "frequency": 58,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_DECLINED",
+        "W_Afhandelen leads"
+      ],
+      "rework_count": 348,
+      "share": 0.004432
+    },
+    {
+      "cycle_p50_seconds": 20158.87,
+      "cycle_p90_seconds": 94541.72,
+      "cycle_p95_seconds": 99025.765,
+      "frequency": 55,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 220,
+      "share": 0.004203
+    },
+    {
+      "cycle_p50_seconds": 105492.655,
+      "cycle_p90_seconds": 256118.659,
+      "cycle_p95_seconds": 295930.633,
+      "frequency": 54,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 540,
+      "share": 0.004126
+    },
+    {
+      "cycle_p50_seconds": 69271.179,
+      "cycle_p90_seconds": 128653.952,
+      "cycle_p95_seconds": 166038.526,
+      "frequency": 44,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 264,
+      "share": 0.003362
+    },
+    {
+      "cycle_p50_seconds": 189861.7,
+      "cycle_p90_seconds": 319351.466,
+      "cycle_p95_seconds": 600196.353,
+      "frequency": 39,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 312,
+      "share": 0.00298
+    },
+    {
+      "cycle_p50_seconds": 90153.103,
+      "cycle_p90_seconds": 196884.122,
+      "cycle_p95_seconds": 204808.899,
+      "frequency": 33,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 264,
+      "share": 0.002522
+    },
+    {
+      "cycle_p50_seconds": 127626.5565,
+      "cycle_p90_seconds": 417714.461,
+      "cycle_p95_seconds": 566189.803,
+      "frequency": 32,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Beoordelen fraude",
+        "W_Beoordelen fraude",
+        "W_Beoordelen fraude",
+        "W_Beoordelen fraude",
+        "A_DECLINED",
+        "W_Beoordelen fraude"
+      ],
+      "rework_count": 128,
+      "share": 0.002445
+    },
+    {
+      "cycle_p50_seconds": 11288.767,
+      "cycle_p90_seconds": 85456.738,
+      "cycle_p95_seconds": 92014.348,
+      "frequency": 31,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "A_DECLINED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 186,
+      "share": 0.002369
+    },
+    {
+      "cycle_p50_seconds": 19569.492,
+      "cycle_p90_seconds": 159509.326,
+      "cycle_p95_seconds": 168134.726,
+      "frequency": 30,
+      "path": [
+        "A_SUBMITTED",
+        "A_PARTLYSUBMITTED",
+        "W_Afhandelen leads",
+        "W_Afhandelen leads",
+        "A_PREACCEPTED",
+        "W_Completeren aanvraag",
+        "W_Afhandelen leads",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "W_Completeren aanvraag",
+        "A_CANCELLED",
+        "W_Completeren aanvraag"
+      ],
+      "rework_count": 180,
+      "share": 0.002292
+    }
+  ]
+}
