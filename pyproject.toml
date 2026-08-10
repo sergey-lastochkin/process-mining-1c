@@ -6,7 +6,7 @@ build-backend="setuptools.build_meta"
 name="1c-process-mining"
 version="0.1.0"
 requires-python=">=3.12"
-description="Event-log analytics engine for reconstructing real business traces, variants, rework, conformance deviations, bottlenecks, and automation-candidate scores."
+description="Анализ журналов событий: варианты, ожидания, возвраты и кандидаты на автоматизацию."
 dependencies=["fastapi>=0.115,<0.116", "pydantic>=2,<3", "uvicorn>=0.30,<0.35"]
 
 [project.optional-dependencies]

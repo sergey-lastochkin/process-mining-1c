@@ -51,10 +51,10 @@ def process_map(data: dict[str, object]) -> str:
         for node, (x, y) in layout.items()
     )
     title = (
-        "BPI Challenge 2012: directly-follows map "
-        f"({summary['activities']} activities, {summary['directly_follows_edges']} edges)"
+        "BPI Challenge 2012: карта переходов "
+        f"({summary['activities']} действий, {summary['directly_follows_edges']} переходов)"
     )
-    note = "Shown: 18 highest-degree activities and 32 most frequent connections. Labels below nodes are incident frequencies."
+    note = "Показаны 18 действий с наибольшей связностью и 32 частых перехода. Под узлами указана суммарная частота."
     return svg(
         1040,
         740,
@@ -70,9 +70,9 @@ def bar_chart(data: dict[str, object]) -> str:
     maximum_wait = max((item["cycle_p95_seconds"] for item in bottlenecks), default=1)
     content = [
         '<text class="title" x="30" y="30">Варианты и самые длинные переходы</text>',
-        '<text class="label" x="30" y="56">Слева: частота варианта. Справа: p95 ожидания между действиями, seconds.</text>',
-        '<text class="label" x="30" y="84">Top variants</text>',
-        '<text class="label" x="570" y="84">Top p95 waits</text>',
+        '<text class="label" x="30" y="56">Слева: частота варианта. Справа: p95 ожидания между действиями, секунды.</text>',
+        '<text class="label" x="30" y="84">Частые варианты</text>',
+        '<text class="label" x="570" y="84">Наибольшие p95 ожидания</text>',
     ]
     for index, item in enumerate(variants):
         y = 112 + index * 42
