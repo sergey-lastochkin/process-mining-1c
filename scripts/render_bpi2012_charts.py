@@ -30,7 +30,7 @@ def process_map(data: dict[str, object]) -> str:
     nodes = sorted(counts, key=lambda name: (-counts[name], name))[:18]
     layout = {
         node: (
-            520 + 355 * math.cos(2 * math.pi * index / max(1, len(nodes))),
+            600 + 420 * math.cos(2 * math.pi * index / max(1, len(nodes))),
             395 + 265 * math.sin(2 * math.pi * index / max(1, len(nodes))),
         )
         for index, node in enumerate(nodes)
@@ -56,7 +56,7 @@ def process_map(data: dict[str, object]) -> str:
     )
     note = "Показаны 18 действий с наибольшей связностью и 32 частых перехода. Под узлами указана суммарная частота."
     return svg(
-        1040,
+        1200,
         740,
         f'<text class="title" x="30" y="32">{html.escape(title)}</text>'
         f'<text class="label" x="30" y="56">{html.escape(note)}</text>' + edge_svg + node_svg,
@@ -64,6 +64,8 @@ def process_map(data: dict[str, object]) -> str:
 
 
 def bar_chart(data: dict[str, object]) -> str:
+    right_x = 670
+    value_x = 1080
     variants = data["top_variants"][:8]
     bottlenecks = data["top_bottlenecks"][:8]
     maximum_variant = max((item["frequency"] for item in variants), default=1)
@@ -72,7 +74,7 @@ def bar_chart(data: dict[str, object]) -> str:
         '<text class="title" x="30" y="30">Варианты и самые длинные переходы</text>',
         '<text class="label" x="30" y="56">Слева: частота варианта. Справа: p95 ожидания между действиями, секунды.</text>',
         '<text class="label" x="30" y="84">Частые варианты</text>',
-        '<text class="label" x="570" y="84">Наибольшие p95 ожидания</text>',
+        f'<text class="label" x="{right_x}" y="84">Наибольшие p95 ожидания</text>',
     ]
     for index, item in enumerate(variants):
         y = 112 + index * 42
@@ -91,12 +93,12 @@ def bar_chart(data: dict[str, object]) -> str:
         width = 370 * item["cycle_p95_seconds"] / maximum_wait
         content.extend(
             [
-                f'<text class="label" x="570" y="{y}">{html.escape(label)}</text>',
-                f'<rect x="570" y="{y + 7}" width="{width:.1f}" height="13" rx="3" fill="#e58e26"/>',
-                f'<text class="label" x="950" y="{y + 19}">{item["cycle_p95_seconds"]:.0f}</text>',
+                f'<text class="label" x="{right_x}" y="{y}">{html.escape(label)}</text>',
+                f'<rect x="{right_x}" y="{y + 7}" width="{width:.1f}" height="13" rx="3" fill="#e58e26"/>',
+                f'<text class="label" x="{value_x}" y="{y + 19}">{item["cycle_p95_seconds"]:.0f}</text>',
             ]
         )
-    return svg(1040, 480, "".join(content))
+    return svg(1200, 480, "".join(content))
 
 
 def main() -> None:
