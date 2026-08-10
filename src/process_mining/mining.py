@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from collections.abc import Iterable
+from itertools import pairwise
 from statistics import median
 from typing import Any
 
@@ -16,9 +17,11 @@ def percentile(values: list[float], fraction: float) -> float:
     return values[round((len(values) - 1) * fraction)] if values else 0.0
 
 
-def case_metrics(events: Iterable[Event]) -> list[dict[str, Any]]:
+def case_metrics_from_traces(
+    grouped: dict[str, list[Event]]
+) -> list[dict[str, Any]]:
     result = []
-    for case_id, trace in correlate(events).items():
+    for case_id, trace in grouped.items():
         path = tuple(e.action for e in trace)
         result.append(
             {
@@ -36,9 +39,13 @@ def case_metrics(events: Iterable[Event]) -> list[dict[str, Any]]:
     return result
 
 
-def variant_stats(events: Iterable[Event]) -> list[dict[str, Any]]:
+def case_metrics(events: Iterable[Event]) -> list[dict[str, Any]]:
+    return case_metrics_from_traces(correlate(events))
+
+
+def variant_stats_from_cases(cases: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     groups: dict[tuple[str, ...], list[dict[str, Any]]] = defaultdict(list)
-    for item in case_metrics(events):
+    for item in cases:
         groups[item["path"]].append(item)
     total = sum(map(len, groups.values())) or 1
     return sorted(
@@ -48,6 +55,9 @@ def variant_stats(events: Iterable[Event]) -> list[dict[str, Any]]:
                 "frequency": len(cases),
                 "share": round(len(cases) / total, 6),
                 "cycle_p50_seconds": median([c["cycle_seconds"] for c in cases]),
+                "cycle_p90_seconds": percentile(
+                    [c["cycle_seconds"] for c in cases], 0.90
+                ),
                 "cycle_p95_seconds": percentile(
                     [c["cycle_seconds"] for c in cases], 0.95
                 ),
@@ -59,10 +69,14 @@ def variant_stats(events: Iterable[Event]) -> list[dict[str, Any]]:
     )
 
 
-def edges(events: Iterable[Event]) -> list[dict[str, Any]]:
+def variant_stats(events: Iterable[Event]) -> list[dict[str, Any]]:
+    return variant_stats_from_cases(case_metrics(events))
+
+
+def edges_from_traces(grouped: dict[str, list[Event]]) -> list[dict[str, Any]]:
     waits: dict[tuple[str, str], list[float]] = defaultdict(list)
-    for trace in correlate(events).values():
-        for left, right in zip(trace, trace[1:]):
+    for trace in grouped.values():
+        for left, right in pairwise(trace):
             waits[(left.action, right.action)].append(
                 max(0, (right.timestamp - left.timestamp).total_seconds())
             )
@@ -73,6 +87,7 @@ def edges(events: Iterable[Event]) -> list[dict[str, Any]]:
                 "to": right,
                 "frequency": len(values),
                 "cycle_p50_seconds": median(values),
+                "cycle_p90_seconds": percentile(values, 0.90),
                 "cycle_p95_seconds": percentile(values, 0.95),
             }
             for (left, right), values in waits.items()
@@ -81,10 +96,18 @@ def edges(events: Iterable[Event]) -> list[dict[str, Any]]:
     )
 
 
-def bottlenecks(events: Iterable[Event]) -> list[dict[str, Any]]:
+def edges(events: Iterable[Event]) -> list[dict[str, Any]]:
+    return edges_from_traces(correlate(events))
+
+
+def bottlenecks_from_edges(edge_stats: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     return sorted(
-        edges(events), key=lambda x: (-x["cycle_p95_seconds"], -x["frequency"])
+        edge_stats, key=lambda x: (-x["cycle_p95_seconds"], -x["frequency"])
     )
+
+
+def bottlenecks(events: Iterable[Event]) -> list[dict[str, Any]]:
+    return bottlenecks_from_edges(edges(events))
 
 
 def automation_score(

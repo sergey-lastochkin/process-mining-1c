@@ -7,7 +7,11 @@ from collections.abc import Iterable
 from typing import Any
 
 from .domain import Event
-from .mining import automation_score, case_metrics, variant_stats
+from .mining import (
+    automation_score,
+    case_metrics,
+    variant_stats,
+)
 
 
 def conformance(path: Iterable[str], expected: list[str]) -> dict[str, Any]:
@@ -24,18 +28,33 @@ def conformance(path: Iterable[str], expected: list[str]) -> dict[str, Any]:
 def conformance_report(
     events: Iterable[Event], expected: list[str]
 ) -> list[dict[str, Any]]:
+    return conformance_report_from_cases(case_metrics(events), expected)
+
+
+def conformance_report_from_cases(
+    cases: Iterable[dict[str, Any]], expected: list[str]
+) -> list[dict[str, Any]]:
     return [
         dict(case_id=x["case_id"], **conformance(x["path"], expected))
-        for x in case_metrics(events)
+        for x in cases
     ]
 
 
 def automation_candidates(
     events: Iterable[Event], expected: list[str]
 ) -> list[dict[str, Any]]:
-    variants = variant_stats(events)
+    return automation_candidates_from_stats(
+        variant_stats(events), case_metrics(events), expected
+    )
+
+
+def automation_candidates_from_stats(
+    variants: list[dict[str, Any]],
+    cases: list[dict[str, Any]],
+    expected: list[str],
+) -> list[dict[str, Any]]:
     total = sum(v["frequency"] for v in variants) or 1
-    conf = conformance_report(events, expected)
+    conf = conformance_report_from_cases(cases, expected)
     rate = (
         sum(bool(x["missing"] or x["unexpected"] or x["out_of_order"]) for x in conf)
         / len(conf)

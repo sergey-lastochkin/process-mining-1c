@@ -37,12 +37,17 @@ def normalise(events: Iterable[Event], salt: str = "synthetic-demo") -> list[Eve
 normalize = normalise
 
 
-def correlate(events: Iterable[Event]) -> dict[str, list[Event]]:
-    """Primary rule: explicit case_id. object_ref is retained as audit evidence, not a hidden join."""
+def group_by_case(events: Iterable[Event]) -> dict[str, list[Event]]:
+    """Group already-normalized events using only the explicit correlation key."""
     grouped: dict[str, list[Event]] = {}
-    for event in normalise(events):
+    for event in events:
         grouped.setdefault(event.case_id, []).append(event)
     return grouped
+
+
+def correlate(events: Iterable[Event]) -> dict[str, list[Event]]:
+    """Primary rule: explicit case_id. object_ref is retained as audit evidence, not a hidden join."""
+    return group_by_case(normalise(events))
 
 
 traces = correlate

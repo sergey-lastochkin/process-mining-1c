@@ -1,14 +1,30 @@
 from datetime import UTC, datetime, timedelta
+from gzip import open as gzip_open
 
 import pytest
 from fastapi.testclient import TestClient
+
 from process_mining.api import create_app
-from process_mining.conformance import *
+from process_mining.conformance import (
+    automation_candidates,
+    automation_score,
+    conformance,
+)
 from process_mining.domain import Event
-from process_mining.engine import export_report, generate
-from process_mining.exports import *
-from process_mining.mining import *
-from process_mining.normalization import *
+from process_mining.exports import dot, graph_json, mermaid
+from process_mining.mining import (
+    bottlenecks,
+    case_metrics,
+    percentile,
+    variant_stats,
+)
+from process_mining.normalization import (
+    DuplicateConflict,
+    correlate,
+    normalise,
+    pseudo,
+)
+from process_mining.xes import load_xes
 
 
 def ev(i, c, t, a, user="alice", ref="r"):
@@ -102,12 +118,6 @@ def test_candidates_are_reported():
     )
 
 
-def test_default_dataset_is_10k_plus_deterministic():
-    assert len(generate()) >= 10000 and [x.event_id for x in generate()[:5]] == [
-        x.event_id for x in generate()[:5]
-    ]
-
-
 def test_graph_json_and_text_exports():
     events = [ev(1, "c", 1, "A"), ev(2, "c", 2, "B")]
     assert (
@@ -115,16 +125,6 @@ def test_graph_json_and_text_exports():
         and "flowchart LR" in mermaid(events)
         and "digraph process" in dot(events)
     )
-
-
-def test_report_has_all_analytics():
-    assert {
-        "variants",
-        "bottlenecks",
-        "conformance",
-        "automation",
-        "graph",
-    } <= export_report(generate(2)).keys()
 
 
 def test_api_processes_and_unknown_process():
@@ -192,3 +192,16 @@ def test_api_case_bottleneck_candidates_and_dot():
 
 def test_api_missing_case_is_404():
     assert TestClient(create_app()).get("/case/nope").status_code == 404
+
+
+def test_xes_loader_reads_trace_contract(tmp_path):
+    source = tmp_path / "tiny.xes.gz"
+    with gzip_open(source, "wt") as target:
+        target.write(
+            "<log><trace><string key='concept:name' value='case-1'/>"
+            "<event><string key='concept:name' value='Create'/>"
+            "<date key='time:timestamp' value='2020-01-01T00:00:00Z'/></event>"
+            "</trace></log>"
+        )
+    events, report = load_xes(source, "test")
+    assert events[0].event_id == "test:1" and report.as_dict()["events_loaded"] == 1

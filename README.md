@@ -1,58 +1,64 @@
-# 1C Process Mining
+# Process Mining for 1C
 
-## What
+Исследование журналов событий: XES-загрузка, варианты процесса, длительности,
+возвраты, directly-follows карта, сравнение с наблюдаемым базовым маршрутом и
+кандидаты на автоматизацию. Ядро также задаёт контракт событий для будущей
+выгрузки из 1С, но не делает вид, что журнал регистрации сам по себе описывает
+смысл работы пользователей.
 
-Deterministic process-mining reference implementation over synthetic 1C-like events. It reconstructs cases and variants, measures cycle/transition latency, detects rework and conformance deviations, ranks automation candidates and exports the discovered graph.
+![Карта процесса](studies/bpi-challenge-2012-2026-08-10/graphs/process-map.svg)
 
-## Why
+## Настоящий журнал и результаты
 
-Raw journal rows are unordered and duplicated, and a single average hides tails and variants. Mining must normalize identities, fail closed on conflicting duplicates, correlate cases, preserve ordering evidence and keep LLMs out of the computational core.
+Первый воспроизводимый запуск использует публичный XES BPI Challenge 2012,
+журнал заявок на кредит. Исходный сжатый файл не добавлен в Git: в
+[source-manifest.json](studies/bpi-challenge-2012-2026-08-10/source-manifest.json)
+зафиксированы DOI, версия, лицензия 4TU General Terms of Use, URL, MD5,
+рассчитанный SHA-256, размер и число событий.
 
-## Architecture
+Результаты, параметры анализа и агрегаты лежат в
+[results.json](studies/bpi-challenge-2012-2026-08-10/results.json). Графики
+генерируются только из этого файла.
 
-- Domain records and process definitions.
-- Normalization: event-ID dedupe/conflict detection, timestamp ordering and pseudonymization.
-- Mining: case traces, variants/frequency, p50/p95, rework and bottlenecks.
-- Conformance and deterministic automation-candidate scoring.
-- JSON, Mermaid and Graphviz DOT exporters using NetworkX when installed, with native fallback.
-- In-memory process repository and FastAPI query surface.
+![Варианты и ожидания](studies/bpi-challenge-2012-2026-08-10/graphs/variants-bottlenecks.svg)
 
-## Key engineering decisions
+Методика, вопросы исследования и ограничения: [docs/study-design.md](docs/study-design.md).
+Команды получения и повтора: [docs/runbook.md](docs/runbook.md). Контракт
+будущей выгрузки 1С: [onec_export/event-contract.md](onec_export/event-contract.md).
 
-- Duplicate IDs with different content raise an explicit conflict.
-- Case identity is supplied by a correlation contract, never guessed from timestamp proximity.
-- Percentiles are calculated from sorted empirical samples.
-- Pseudonymization is deterministic but is not claimed as anonymization.
-- The default seeded generator emits more than 10,000 synthetic functional-demo events across multiple variants; it is not a load benchmark.
+## Что считает код
 
-## Run
+- XES reader потоково читает trace `concept:name`, activity `concept:name` и
+  `time:timestamp`; записи без обязательных полей попадают в счётчики пропуска.
+- Корреляция использует только явный case id. Сортировка строится по времени и
+  стабильному идентификатору события; конфликт повторного event id завершает
+  обработку ошибкой.
+- Для вариантов и переходов выводятся частота, p50, p90 и p95. Повторные
+  действия считаются отдельно от длительности.
+- Базовый маршрут берётся как самый частый наблюдаемый вариант. Отклонения от
+  него являются статистическим сравнением, не conformance с утверждённой BPMN.
+- Оценка automation candidate прозрачна и эвристическая. Это не расчёт ROI.
+
+## Локальный API и тесты
 
 ```bash
 python3.12 -m venv .venv
-.venv/bin/python -m pip install --upgrade pip
-.venv/bin/python -m pip install -e .
-.venv/bin/uvicorn process_mining.api:app
-```
-
-API: `POST /events`, `GET /processes`, `GET /process/{id}/variants`, `GET /process/{id}/bottlenecks`, `GET /process/{id}/automation-candidates`, `GET /case/{id}`.
-
-Optional NetworkX enrichment is not required because JSON/Mermaid/DOT have a native fallback:
-
-```bash
-.venv/bin/python -m pip install -e '.[graphs]'
-```
-
-## Test
-
-```bash
 .venv/bin/python -m pip install -e '.[dev]'
-.venv/bin/python -m pytest -q
+PYTHONPATH=src .venv/bin/python -m pytest -q
+PYTHONPATH=src .venv/bin/uvicorn process_mining.api:app
 ```
 
-Tests cover duplicates/conflicts, out-of-order events, correlation, variants, p50/p95, rework, bottlenecks, conformance, scoring bounds, 10k+ generation, all exports and exact API semantics.
+API принимает отдельные события через `POST /events` и отдаёт варианты,
+узкие места, кандидаты и DOT граф. Это локальная диагностическая поверхность,
+не сервис хранения production-логов.
 
-## Limitations
+## Ограничения
 
-- Repository state is local/in-memory; no live 1C connector, auth or scheduler is supplied.
-- Hash pseudonymization does not satisfy an anonymization or retention policy by itself.
-- Automation scores are transparent heuristics, not measured ROI predictions.
+- BPI Challenge 2012 описывает не 1С, а обезличенный процесс заявок на кредит.
+- Данные опубликованы по условиям 4TU. Сырые записи не распространяются в этом
+  репозитории; перед другим использованием нужно проверить актуальные условия.
+- Resource id псевдонимизируется до анализа, но это не заменяет политику
+  хранения или обезличивания компании.
+- Для интерпретации процесса 1С нужны дополнительные бизнес-события: причина
+  изменения документа, связь с документом-основанием, роль, состояние и итог
+  проверки. Один журнал регистрации обычно не содержит их полностью.
